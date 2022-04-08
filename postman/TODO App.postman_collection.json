@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "ff91f93a-fb75-4fe5-a5fd-058ed3a80bd4",
+		"name": "TODO App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_NAME}}/api/v1/todos",
+					"host": [
+						"{{HOST_NAME}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_NAME}}/api/v1/todos/{{TODO_ID}}",
+					"host": [
+						"{{HOST_NAME}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"todos",
+						"{{TODO_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test 1\",\r\n    \"description\": \"Test 1 description example.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_NAME}}/api/v1/todos",
+					"host": [
+						"{{HOST_NAME}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test 1 update\",\r\n    \"description\": \"Test 1 description example update.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_NAME}}/api/v1/todos/{{TODO_ID}}",
+					"host": [
+						"{{HOST_NAME}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"todos",
+						"{{TODO_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_NAME}}/api/v1/todos/{{TODO_ID}}",
+					"host": [
+						"{{HOST_NAME}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"todos",
+						"{{TODO_ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

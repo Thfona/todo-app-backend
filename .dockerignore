@@ -19,6 +19,7 @@
 **/docker-compose*
 **/Dockerfile*
 **/node-modules
+**/postman
 **/npm-debug.log
 **/obj
 **/secrets.dev.yaml
