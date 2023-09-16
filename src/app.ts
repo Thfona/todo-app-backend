@@ -97,6 +97,8 @@ class App {
   private connectDatabase(): void {
     const db = EnvironmentUtil.databaseHost();
 
+    mongoose.set('strictQuery', true);
+
     mongoose
       .connect(db)
       .then(() => {

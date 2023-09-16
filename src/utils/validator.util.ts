@@ -1,10 +1,11 @@
-import Joi, { Schema } from 'joi';
+import Joi, { Schema, ValidationResult } from 'joi';
 import { ErrorMessageUtil } from './error-message.util';
-import { ParsedValidationResult } from '../interfaces/parsed-validation-result.interface';
 
 type SchemaNameType = 'todo';
 
 type SchemaObjectType = { [T in SchemaNameType]: Joi.ObjectSchema<any> };
+
+type ParsedValidationResult = { parsedErrorMessage: string } & ValidationResult;
 
 export class ValidatorUtil {
   private static schemas: SchemaObjectType = {
